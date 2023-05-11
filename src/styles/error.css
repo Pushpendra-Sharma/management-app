@@ -1,0 +1,14 @@
+.error-container {
+  display: flex;
+  margin: auto;
+  padding: 8rem;
+  flex-direction: column;
+}
+
+.error-status {
+  font-size: large;
+}
+
+.error-message {
+  font-size: medium;
+}
