@@ -1,12 +1,13 @@
 import React from 'react';
 import '@atlaskit/css-reset';
 import './App.css';
+import { Navigation } from './components';
 
 function App() {
   return (
-    <div className='App'>
-      <h1>Employee Management System</h1>
-    </div>
+    <>
+      <Navigation />
+    </>
   );
 }
 
