@@ -17,6 +17,7 @@
     "@atlaskit/lozenge": "^11.4.0",
     "@atlaskit/modal-dialog": "^12.5.0",
     "@atlaskit/popup": "^1.6.0",
+    "@atlaskit/spinner": "^15.5.0",
     "@atlaskit/table-tree": "^9.3.2",
     "@atlaskit/tabs": "^13.4.0",
     "@atlaskit/textfield": "^5.4.0",
@@ -27,6 +28,7 @@
     "@testing-library/react": "^12.1.5",
     "react": "16.8",
     "react-dom": "16.8",
+    "react-router-dom": "^6.11.1",
     "react-scripts": "5.0.1",
     "typescript": "4.5",
     "web-vitals": "^2.1.4"
