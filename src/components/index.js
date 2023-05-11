@@ -8,3 +8,6 @@ export { default as SearchBar } from './SearchBar';
 export { default as Error } from './Error';
 export { default as MainContainer } from './MainContainer';
 export { default as ShortListedUsers } from './ShortListedUsers';
+export { default as Filter } from './Filter';
+export { default as CheckBoxInput } from './CheckBoxInput';
+export { default as RadioInput } from './RadioInput';

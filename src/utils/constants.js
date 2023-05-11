@@ -60,3 +60,19 @@ export const headData = [
     width: 8,
   },
 ];
+
+export const bloodGroupOptions = [
+  { label: 'A+', value: 'A+' },
+  { label: 'A-', value: 'A-' },
+  { label: 'B+', value: 'B+' },
+  { label: 'B-', value: 'B-' },
+  { label: 'O+', value: 'O+' },
+  { label: 'O-', value: 'O-' },
+  { label: 'AB+', value: 'AB+' },
+  { label: 'AB-', value: 'AB-' },
+];
+
+export const genderOptions = [
+  { name: 'male', value: 'male', label: 'Male' },
+  { name: 'female', value: 'female', label: 'Female' },
+];
