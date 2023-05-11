@@ -8,6 +8,7 @@
     "@atlaskit/avatar": "^21.3.0",
     "@atlaskit/blanket": "^12.4.0",
     "@atlaskit/button": "^16.6.1",
+    "@atlaskit/checkbox": "^12.5.0",
     "@atlaskit/css-reset": "^6.4.1",
     "@atlaskit/dropdown-menu": "^11.8.0",
     "@atlaskit/dynamic-table": "^14.9.0",
