@@ -31,7 +31,7 @@ export default function TableControlled({ head, items, isLoading }) {
     if (sortOrder === 'DESC') setSortOrder('ASC');
   };
 
-  const rows = createRowsData(items, handleButtonClick);
+  const rows = createRowsData(items, handleButtonClick, sortOrder, sortKey);
 
   return (
     <div className='table-container'>

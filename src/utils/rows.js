@@ -1,8 +1,20 @@
 import React from 'react';
 import Button from '@atlaskit/button/standard-button';
 
-export const createRowsData = (data, callback) => {
-  const rows = data.map((row, index) => {
+export const createRowsData = (data, callback, sortOrder, sortKey) => {
+  const sortedItems = [...data].sort((a, b) => {
+    if (sortOrder === 'ASC') {
+      if (a[sortKey] < b[sortKey]) return -1;
+      if (a[sortKey] > b[sortKey]) return 1;
+      return 0;
+    } else {
+      if (a[sortKey] < b[sortKey]) return 1;
+      if (a[sortKey] > b[sortKey]) return -1;
+      return 0;
+    }
+  });
+
+  const rows = sortedItems.map((row, index) => {
     return {
       key: row.id,
       cells: [
