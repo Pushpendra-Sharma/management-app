@@ -5,3 +5,6 @@ export { default as DyamicTable } from './DyamicTable';
 export { default as UserModal } from './UserModal';
 export { default as UserCard } from './UserCard';
 export { default as SearchBar } from './SearchBar';
+export { default as Error } from './Error';
+export { default as MainContainer } from './MainContainer';
+export { default as ShortListedUsers } from './ShortListedUsers';
