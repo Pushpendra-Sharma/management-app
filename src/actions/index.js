@@ -1,0 +1,4 @@
+export const SET_MODAL_USER_ID = 'SET_MODAL_USER_ID';
+export const SET_ALL_USERS = 'SET_ALL_USERS';
+export const SET_MODAL_USER = 'SET_MODAL_USER';
+export const SHORTLIST_USER = 'SHORTLIST_USER';
