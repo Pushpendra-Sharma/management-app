@@ -1,0 +1,12 @@
+.shortlist-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.shortlist-empty-container {
+  padding: 4rem;
+  font-size: large;
+  margin: auto;
+}
