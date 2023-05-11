@@ -12,9 +12,10 @@ export const AppContext = createContext({
   dispatch: () => {},
   filters: {
     gender: null,
-    bloodGroup: null,
-    university: null,
+    bloodGroup: [],
+    university: [],
   },
+  searchQuery: '',
 });
 
 export const initialState = {
@@ -25,9 +26,10 @@ export const initialState = {
   dispatch: () => {},
   filters: {
     gender: null,
-    bloodGroup: null,
-    university: null,
+    bloodGroup: [],
+    university: [],
   },
+  searchQuery: '',
 };
 
 AppContext.displayName = 'AppContext';
@@ -49,6 +51,7 @@ export const AppProvider = ({ children }) => {
     shortListedUsers: state.shortListedUsers,
     dispatch,
     filters: state.filters,
+    searchQuery: state.searchQuery,
   };
 
   return (

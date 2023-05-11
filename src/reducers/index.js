@@ -6,6 +6,8 @@ import {
   SET_MODAL_USER_ID,
   SET_UNIVERSITY_FILTER,
   SHORTLIST_USER,
+  CLEAR_FILTERS,
+  SET_SEARCH_QUERY,
 } from '../actions';
 
 export function appReducer(state, action) {
@@ -55,6 +57,22 @@ export function appReducer(state, action) {
           ...state.filters,
           university: action.payload,
         },
+      };
+
+    case CLEAR_FILTERS:
+      return {
+        ...state,
+        filters: {
+          gender: null,
+          bloodGroup: [],
+          university: [],
+        },
+      };
+
+    case SET_SEARCH_QUERY:
+      return {
+        ...state,
+        searchQuery: action.payload,
       };
 
     default:
