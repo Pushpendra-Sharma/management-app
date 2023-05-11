@@ -10,6 +10,11 @@ export const AppContext = createContext({
   modalUserId: null,
   shortListedUsers: {},
   dispatch: () => {},
+  filters: {
+    gender: null,
+    bloodGroup: null,
+    university: null,
+  },
 });
 
 export const initialState = {
@@ -18,6 +23,11 @@ export const initialState = {
   modalUserId: null,
   shortListedUsers: {},
   dispatch: () => {},
+  filters: {
+    gender: null,
+    bloodGroup: null,
+    university: null,
+  },
 };
 
 AppContext.displayName = 'AppContext';
@@ -38,6 +48,7 @@ export const AppProvider = ({ children }) => {
     modalUserid: state.modalUserId,
     shortListedUsers: state.shortListedUsers,
     dispatch,
+    filters: state.filters,
   };
 
   return (
