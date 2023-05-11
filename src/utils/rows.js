@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@atlaskit/button/standard-button';
 
-export const createRowsData = data => {
+export const createRowsData = (data, callback) => {
   const rows = data.map((row, index) => {
     return {
       key: row.id,
@@ -45,11 +45,7 @@ export const createRowsData = data => {
         {
           key: 'details',
           content: (
-            <Button
-              onClick={() => {
-                console.log(':::modal button');
-              }}
-            >
+            <Button appearance='primary' onClick={() => callback(row.id)}>
               Details
             </Button>
           ),

@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import ButtonGroup from '@atlaskit/button/button-group';
 import Button from '@atlaskit/button/standard-button';
 import { DynamicTableStateless } from '@atlaskit/dynamic-table';
 import { createRowsData } from '../utils/rows';
 import '../styles/table.css';
+import { AppContext } from '../contexts/app-context';
+import { SET_MODAL_USER } from '../actions';
 
 const TableCaption = <h2 className='caption'>List of Users</h2>;
 
@@ -11,6 +13,13 @@ export default function TableControlled({ head, items, isLoading }) {
   const [pageNumber, setPageNumber] = useState(1);
   const [sortOrder, setSortOrder] = useState('ASC');
   const [sortKey, setSortKey] = useState('index');
+
+  const { dispatch, setModalOpen } = useContext(AppContext);
+
+  const handleButtonClick = userId => {
+    dispatch({ type: SET_MODAL_USER, payload: userId });
+    setModalOpen();
+  };
 
   const navigateTo = pageNumber => {
     setPageNumber(pageNumber);
@@ -22,7 +31,7 @@ export default function TableControlled({ head, items, isLoading }) {
     if (sortOrder === 'DESC') setSortOrder('ASC');
   };
 
-  const rows = createRowsData(items);
+  const rows = createRowsData(items, handleButtonClick);
 
   return (
     <div className='table-container'>

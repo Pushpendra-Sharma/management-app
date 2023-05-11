@@ -1,13 +1,14 @@
 import React from 'react';
 import '@atlaskit/css-reset';
 import './App.css';
-import { UserList, Navigation } from './components';
+import { Navigation, UserList, UserModal } from './components';
 
 function App() {
   return (
     <>
       <Navigation />
       <UserList />
+      <UserModal />
     </>
   );
 }
