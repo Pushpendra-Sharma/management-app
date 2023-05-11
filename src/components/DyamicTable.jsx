@@ -12,7 +12,7 @@ const TableCaption = <h2 className='caption'>List of Users</h2>;
 export default function TableControlled({ head, items, isLoading }) {
   const [pageNumber, setPageNumber] = useState(1);
   const [sortOrder, setSortOrder] = useState('ASC');
-  const [sortKey, setSortKey] = useState('index');
+  const [sortKey, setSortKey] = useState('firstName');
 
   const { dispatch, setModalOpen } = useContext(AppContext);
 

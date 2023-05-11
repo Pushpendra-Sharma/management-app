@@ -20,7 +20,7 @@ export const headData = [
   {
     key: 'age',
     content: 'Age',
-    isSortable: false,
+    isSortable: true,
     width: 4,
   },
   {
