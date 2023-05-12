@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { fetchUsers } from '../services/get.users';
+import { fetchAllUsers } from '../services/get.users';
 import { createHead } from '../utils/head';
 import { headData } from '../utils/constants';
 import { DyamicTable } from '.';
@@ -19,7 +19,7 @@ const UserList = () => {
   } = useContext(AppContext);
 
   useEffect(() => {
-    fetchUsers()
+    fetchAllUsers()
       .then(res => {
         setUsers(res.users);
         setFilteredUsers(res.users);
