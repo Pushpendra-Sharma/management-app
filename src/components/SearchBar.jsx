@@ -27,7 +27,7 @@ const SearchBar = () => {
     <div className='search-container'>
       <TextField
         icon={<SearchIcon label='Search icon' size='medium' />}
-        placeholder='Search...'
+        placeholder='Search users by first name...'
         value={value}
         onChange={onChange}
       />
