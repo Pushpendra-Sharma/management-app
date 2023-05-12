@@ -44,7 +44,7 @@ export default function TableControlled({ head, items, isLoading }) {
             Previous Page
           </Button>
           <Button
-            isDisabled={pageNumber === 5}
+            isDisabled={pageNumber === 7}
             onClick={() => navigateTo(pageNumber + 1)}
           >
             Next Page
