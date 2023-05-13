@@ -12,3 +12,4 @@ export { default as Filter } from './Filter';
 export { default as CheckBoxInput } from './CheckBoxInput';
 export { default as RadioInput } from './RadioInput';
 export { default as DropdownRadio } from './DropdownRadio';
+export { default as DropdownCheckbox } from './DropdownCheckbox';
