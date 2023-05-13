@@ -1,17 +1,26 @@
 import React from 'react';
 import '../styles/filter.css';
-import { CheckBoxInput, RadioInput } from './';
-import { bloodGroupOptions, genderOptions } from '../utils/constants';
+import { DropdownCheckbox, DropdownRadio } from './';
+import {
+  bloodGroupOptions,
+  genderOptions,
+  universityOptions,
+} from '../utils/constants';
 
 const Filter = () => {
   return (
     <div className='filter-container'>
       <h3 className='filter-heading'>Filters</h3>
-      <RadioInput options={genderOptions} title='Gender' />
-      <CheckBoxInput
+      <DropdownRadio options={genderOptions} title='Gender' />
+      <DropdownCheckbox
         options={bloodGroupOptions}
         title='Blood Group'
         id='bloodGroup'
+      />
+      <DropdownCheckbox
+        options={universityOptions}
+        title='University'
+        id='university'
       />
     </div>
   );
