@@ -15,7 +15,7 @@ const UserList = () => {
   const {
     dispatch,
     searchQuery,
-    filters: { gender, bloodGroup },
+    filters: { gender, bloodGroup, university },
   } = useContext(AppContext);
 
   useEffect(() => {
@@ -34,17 +34,26 @@ const UserList = () => {
       return user.gender === gender;
     });
 
+    setFilteredUsers(usersByGender);
+  }, [gender, users]);
+
+  useEffect(() => {
     const usersByBloodGroup = users.filter(user => {
       if (bloodGroup.length === 0) return true;
       return bloodGroup.includes(user.bloodGroup);
     });
 
-    const commonArr = usersByGender.filter(item =>
-      usersByBloodGroup.includes(item)
-    );
+    setFilteredUsers(usersByBloodGroup);
+  }, [bloodGroup, users]);
 
-    setFilteredUsers(commonArr);
-  }, [gender, bloodGroup, users]);
+  useEffect(() => {
+    const usersByUniversity = users.filter(user => {
+      if (university.length === 0) return true;
+      return university.includes(user.university);
+    });
+
+    setFilteredUsers(usersByUniversity);
+  }, [university, users]);
 
   useEffect(() => {
     if (searchQuery) {
