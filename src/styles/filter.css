@@ -18,3 +18,18 @@
 .radio-container {
   display: flex;
 }
+
+.dropdown-radio-container {
+  display: flex;
+  flex-direction: column;
+  width: 8rem;
+}
+
+.dropdown-radio-options {
+  width: 8rem;
+}
+
+.clear-btn {
+  text-align: left;
+  top: 0.5rem;
+}

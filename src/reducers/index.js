@@ -42,20 +42,30 @@ export function appReducer(state, action) {
       };
 
     case SET_BLOOD_GROUP_FILTER:
+      const selectedBloodGroups = [];
+      for (const key in action.payload) {
+        if (action.payload[key]) selectedBloodGroups.push(key);
+      }
+
       return {
         ...state,
         filters: {
           ...state.filters,
-          bloodGroup: action.payload,
+          bloodGroup: selectedBloodGroups,
         },
       };
 
     case SET_UNIVERSITY_FILTER:
+      const selectedUniversities = [];
+      for (const key in action.payload) {
+        if (action.payload[key]) selectedUniversities.push(key);
+      }
+
       return {
         ...state,
         filters: {
           ...state.filters,
-          university: action.payload,
+          university: selectedUniversities,
         },
       };
 
